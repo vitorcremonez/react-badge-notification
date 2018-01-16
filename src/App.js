@@ -6,7 +6,7 @@ class App extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            quantityNotifications: 12,
+            quantityNotifications: 0,
         }
     }
 
@@ -18,7 +18,7 @@ class App extends Component {
                 {this.state.quantityNotifications}
                 <br/><br/><br/><br/>
                 <BadgeNotification quantity={this.state.quantityNotifications}>
-                    <button>Olá mundo</button>
+                    <button>Hello World!</button>
                 </BadgeNotification>
             </div>
         );

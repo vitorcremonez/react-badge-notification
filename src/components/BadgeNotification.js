@@ -1,21 +1,12 @@
 import React, {Component} from 'react';
 import '../styles/badge-notification.css';
+import Notification from "./Notification";
 
 class BadgeNotification extends Component {
-    componentDidUpdate(oldProps) {
-        let a = oldProps.quantity;
-        let b = this.props.quantity;
-        if(a !== b) {
-            console.log(a,b);
-        }
-    }
-
     render() {
-        return(
+        return (
             <span className="badge-notification">
-                <span className="notification" style={this.props.quantity>0 ? {display: "block"} : {display:"none"}}>
-                    { this.props.quantity }
-                </span>
+                <Notification quantity={this.props.quantity}/>
                 { this.props.children }
             </span>
         );
